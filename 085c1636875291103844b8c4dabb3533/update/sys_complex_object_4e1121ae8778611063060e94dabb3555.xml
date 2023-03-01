@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD8a1121ae6d7861103127bec31f3d0755</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>085c1636875291103844b8c4dabb3533</scope_name>
+        <serialized_content>{"FlowDesigner:FD8a1121ae6d7861103127bec31f3d0755":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"}},"FlowDesigner:FD8a1121ae6d7861103127bec31f3d0755.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD8a1121ae6d7861103127bec31f3d0755\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Input Data\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"0943c18d-f2c2-4ec1-aefb-a9102d545a58\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 20:21:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4e1121ae8778611063060e94dabb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD8a1121ae6d7861103127bec31f3d0755</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_complex_object_4e1121ae8778611063060e94dabb3555</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 20:21:29</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD831121ae987861100a761ffb139767cf</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>085c1636875291103844b8c4dabb3533</scope_name>
+        <serialized_content>{"FlowDesigner:FD831121ae987861100a761ffb139767cf":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD831121ae987861100a761ffb139767cf.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Current Values\",\"mandatory\":\"false\",\"child_name\":\"current_value\",\"uiUniqueId\":\"d8637fbb-1c7e-408c-a7e7-59939ab97dda\",\"uiTypeLabel\":\"\",\"co_type_name\":\"FD831121ae987861100a761ffb139767cf\",\"child_label\":\"Current Value\",\"child_type_label\":\"String\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"2\",\"max_length\":\"0\",\"child_uiUniqueId\":\"8095097a-f20b-44a2-81f9-5450a8f33af3\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 20:21:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>471121ae8778611063060e94dabb35cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD831121ae987861100a761ffb139767cf</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_complex_object_471121ae8778611063060e94dabb35cf</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 20:21:33</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

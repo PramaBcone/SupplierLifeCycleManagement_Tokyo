@@ -1,0 +1,2658 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>update_vendor</internal_name>
+        <label_cache>[{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.Record.u_connection.sys_id","label":"6 - Look Up Record➛ERP Source Configuration Record➛Connection \u0026 Credential Alias➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_alias","column_name":"sys_id"},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.__dont_treat_as_error__","label":"8 - Look Up Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.__action_status__","label":"8 - Look Up Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.error_message","label":"8 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.status","label":"8 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.Table","label":"8 - Look Up Record➛Connection \u0026 Credential Aliases Table","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.Record","label":"8 - Look Up Record➛Connection \u0026 Credential Aliases Record","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.__dont_treat_as_error__","label":"6 - Look Up Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.__action_status__","label":"6 - Look Up Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.error_message","label":"6 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.status","label":"6 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.Table","label":"6 - Look Up Record➛ERP Source Configuration Table","reference":"sn_fcms_intg_source","reference_display":"ERP Source Configuration","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.Record","label":"6 - Look Up Record➛ERP Source Configuration Record","reference":"sn_fcms_intg_source","reference_display":"ERP Source Configuration","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.erp_source","label":"Flow Variables➛ERP Source","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"36d7600f-6a4a-46b2-bf8f-472004cd12b5"}},{"name":"Updated_1.current.erp_source.sys_id","label":"Trigger - Record Updated➛Supplier Record➛ERP source➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_fin_erp_source","column_name":"sys_id"},{"name":"Updated_1.current.legal_entities","label":"Trigger - Record Updated➛Supplier Record➛Legal entities","reference":"sn_fin_legal_entity","reference_display":"Legal Entity","type":"glide_list","base_type":"glide_list","parent_table_name":"sn_fin_supplier","column_name":"legal_entities"},{"name":"Updated_1.current.erp_source","label":"Trigger - Record Updated➛Supplier Record➛ERP source","reference":"sn_fin_erp_source","reference_display":"ERP Source","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier","column_name":"erp_source"},{"name":"7de9840f-b478-4818-b7a2-25a35bcf2184.item.previous_value","label":"2 - For Each➛FDChangeDetails➛Previous Value","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"flow_variable.legal_entities","label":"Flow Variables➛Legal Entities","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f991e3f3-cc50-43e7-b56d-7dd01ce7a0c5"}},{"name":"3ee50432-b8b9-4a77-95dc-ebee33dbc1a6.__dont_treat_as_error__","label":"3 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3ee50432-b8b9-4a77-95dc-ebee33dbc1a6.__action_status__","label":"3 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Supplier Record","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","attributes":{}},{"name":"917c708c-1346-496b-b3d4-7b74f4312a90.context","label":"2 - Update Supplier in SAP ECC➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"917c708c-1346-496b-b3d4-7b74f4312a90.status","label":"2 - Update Supplier in SAP ECC➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1c383535-fb9b-4faf-a62a-36f245dd5d7d"}},{"name":"917c708c-1346-496b-b3d4-7b74f4312a90.error","label":"2 - Update Supplier in SAP ECC➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6206963d-a88f-4e85-b4ae-b260685b8181"}},{"name":"Updated_1.changed_fields","label":"Trigger - Record Updated➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"7de9840f-b478-4818-b7a2-25a35bcf2184.item","label":"2 - For Each➛FDChangeDetails","reference_display":"FDChangeDetails","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.__action_status__","label":"1 - Create update supplier profile task➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD557163e80d6201106db0c84daff6483b","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"8bce4805-326f-4be5-9c09-5125164f9004"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.__dont_treat_as_error__","label":"1 - Create update supplier profile task➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"299b705c-9d01-493c-ab79-199aba6f28a9"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.supplier_task_sysid","label":"1 - Create update supplier profile task➛Supplier task sysId","reference_display":"Supplier task sysId","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"b455983b-b420-41ab-9d71-78a58f2db641"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.supplier_task_record","label":"1 - Create update supplier profile task➛Supplier task record","reference":"sn_supplier_task","reference_display":"Supplier Task","type":"reference","base_type":"reference","attributes":{"uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"reference","uiUniqueId":"926505cc-20df-4a31-86b7-8bfd906e1bc7"}},{"name":"a0708503-05ba-4804-9aeb-b1cdd45b975c.context","label":"10 - Update Supplier in SAP ECC➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"a0708503-05ba-4804-9aeb-b1cdd45b975c.status","label":"10 - Update Supplier in SAP ECC➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1c383535-fb9b-4faf-a62a-36f245dd5d7d"}},{"name":"a0708503-05ba-4804-9aeb-b1cdd45b975c.error","label":"10 - Update Supplier in SAP ECC➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6206963d-a88f-4e85-b4ae-b260685b8181"}}]</label_cache>
+        <master_snapshot>586c192787c82550a3e3cbb4dabb35d8</master_snapshot>
+        <name>Update Vendor</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>fc3aab448751251063060e94dabb3554</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:45:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>feebdde387c82550a3e3cbb4dabb359f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Update Vendor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_hub_flow_feebdde387c82550a3e3cbb4dabb359f</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:09</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="sn_fin_supplier">active=true^sys_updated_by!=system^erp_company_codeISNOTEMPTY<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="sys_updated_by" goto="false" newquery="false" operator="!=" or="false" value="system"/>
+            <item endquery="false" field="erp_company_code" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:27:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fc3aab448751251063060e94dabb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:06</sys_updated_on>
+        <table>sn_fin_supplier</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"783aab448751251063060e94dabb3555","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>feebdde387c82550a3e3cbb4dabb359f</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:27:06</sys_created_on>
+        <sys_id>783aab448751251063060e94dabb3555</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:06</sys_updated_on>
+        <trigger display_value="">fc3aab448751251063060e94dabb3554</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>783aab448751251063060e94dabb3555</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:27:06</sys_created_on>
+        <sys_id>703aab448751251063060e94dabb3556</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT IN783aab448751251063060e94dabb3555"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT INcb5c192787c82550a3e3cbb4dabb356e"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>cb5c192787c82550a3e3cbb4dabb356e</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:07</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cb5c192787c82550a3e3cbb4dabb356e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>cb5c192787c82550a3e3cbb4dabb356e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>135c192787c82550a3e3cbb4dabb3570</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:38</sys_updated_on>
+        <value>sn_fin_supplier</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>cb5c192787c82550a3e3cbb4dabb356e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>5f5c192787c82550a3e3cbb4dabb356f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 18:56:59</sys_updated_on>
+        <value>active=true^sys_updated_by!=system^erp_company_codeISNOTEMPTY</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>cb5c192787c82550a3e3cbb4dabb356e</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>875c192787c82550a3e3cbb4dabb356f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:38</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=cb5c192787c82550a3e3cbb4dabb356e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT INfaebdde387c82550a3e3cbb4dabb35a0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>feebdde387c82550a3e3cbb4dabb359f</id>
+        <name>Update Vendor</name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:45:42</sys_created_on>
+        <sys_id>faebdde387c82550a3e3cbb4dabb35a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:45:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=faebdde387c82550a3e3cbb4dabb35a0"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT IN0b5c192787c82550a3e3cbb4dabb3569,4b5c192787c82550a3e3cbb4dabb3561,cb5c192787c82550a3e3cbb4dabb3565"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</model>
+        <model_id>feebdde387c82550a3e3cbb4dabb359f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>0b5c192787c82550a3e3cbb4dabb3569</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</model>
+        <model_id>feebdde387c82550a3e3cbb4dabb359f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:37</sys_created_on>
+        <sys_id>4b5c192787c82550a3e3cbb4dabb3561</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</model>
+        <model_id>feebdde387c82550a3e3cbb4dabb359f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>cb5c192787c82550a3e3cbb4dabb3565</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT IN176967048751251063060e94dabb3508,536927048751251063060e94dabb35e2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <order>8</order>
+        <parent_ui_id>312ff069-2e05-41a0-bca8-19a1d29c9029</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>176967048751251063060e94dabb3508</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:28:19</sys_updated_on>
+        <ui_id>cf7bc634-6af3-4e66-b682-f3e1f7fb8da1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=176967048751251063060e94dabb3508"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>176967048751251063060e94dabb3508</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>136967048751251063060e94dabb350a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <value>sys_alias</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=176967048751251063060e94dabb3508"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>176967048751251063060e94dabb3508</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>db6967048751251063060e94dabb3509</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{e07f091d-7815-4c59-ae4e-c64966cb8197.Record.u_connection.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>176967048751251063060e94dabb3508</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>9f6967048751251063060e94dabb3509</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=176967048751251063060e94dabb3508"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=176967048751251063060e94dabb3508"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <order>6</order>
+        <parent_ui_id>dc28238d-d737-48eb-a1a1-c04d9b340962</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>536927048751251063060e94dabb35e2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:28:19</sys_updated_on>
+        <ui_id>e07f091d-7815-4c59-ae4e-c64966cb8197</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=536927048751251063060e94dabb35e2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>536927048751251063060e94dabb35e2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>5f6927048751251063060e94dabb35e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <value>sn_fcms_intg_source</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=536927048751251063060e94dabb35e2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>536927048751251063060e94dabb35e2</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>1b6927048751251063060e94dabb35e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>fin_erp.sys_id={{flow_variable.erp_source}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>536927048751251063060e94dabb35e2</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>db6927048751251063060e94dabb35e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=536927048751251063060e94dabb35e2"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=536927048751251063060e94dabb35e2"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT INaf43d1228778611063060e94dabb35f3"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <inputs/>
+        <inputs/>
+        <order>10</order>
+        <parent_ui_id>07869a97-cf10-4503-a52c-354f77ff063d</parent_ui_id>
+        <subflow display_value="Update Supplier in SAP ECC">118dbb5e87635910a3e3cbb4dabb358e</subflow>
+        <subflow_instance_inputs/>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:14</sys_created_on>
+        <sys_id>af43d1228778611063060e94dabb35f3</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:08</sys_updated_on>
+        <ui_id>a0708503-05ba-4804-9aeb-b1cdd45b975c</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=af43d1228778611063060e94dabb35f3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>af43d1228778611063060e94dabb35f3</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:15</sys_created_on>
+        <sys_id>6b4315228778611063060e94dabb3508</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:15</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait For Completion">e743d1228778611063060e94dabb35f5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=af43d1228778611063060e94dabb35f3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>changed_fields</field>
+        <id>af43d1228778611063060e94dabb35f3</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:15</sys_created_on>
+        <sys_id>2f4315228778611063060e94dabb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:15</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_118dbb5e87635910a3e3cbb4dabb358e</table>
+        <value>{{Updated_1.changed_fields}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>supplier_record</field>
+        <id>af43d1228778611063060e94dabb35f3</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:15</sys_created_on>
+        <sys_id>674315228778611063060e94dabb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:15</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_118dbb5e87635910a3e3cbb4dabb358e</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait_for_completion</field>
+        <id>af43d1228778611063060e94dabb35f3</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:15</sys_created_on>
+        <sys_id>e74315228778611063060e94dabb3508</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:15</sys_updated_on>
+        <table>var__m_sys_hub_sub_flow_instance_inputs_af43d1228778611063060e94dabb35f3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_af43d1228778611063060e94dabb35f3^id=af43d1228778611063060e94dabb35f3"/>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=af43d1228778611063060e94dabb35f3^sys_idNOT INe743d1228778611063060e94dabb35f5"/>
+    <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,fd_hide_inline_script_widget=true,uiType=boolean,uiTypeLabel=True/False</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>wait_for_completion</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Wait For Completion</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="">af43d1228778611063060e94dabb35f3</model>
+        <model_id>af43d1228778611063060e94dabb35f3</model_id>
+        <model_table>sys_hub_flow_logic_ext_input</model_table>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_af43d1228778611063060e94dabb35f3</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:14</sys_created_on>
+        <sys_id>e743d1228778611063060e94dabb35f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_sub_flow_instance_inputs>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=af43d1228778611063060e94dabb35f3"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT IN4b6927048751251063060e94dabb35d4,7a6927048751251063060e94dabb35c7,876927048751251063060e94dabb35d0,8f6927048751251063060e94dabb35cc,9b6927048751251063060e94dabb35e5,cf6927048751251063060e94dabb35d7,db6967048751251063060e94dabb350a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">836927048751251063060e94dabb35d4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <flow_variable/>
+        <flow_variables_assigned>erp_source</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>daadbc8b-5c31-4d27-9234-7d18c9d076e4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>4b6927048751251063060e94dabb35d4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:08</sys_updated_on>
+        <ui_id>ad27378f-a917-476d-a1b4-49408d6ed824</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=4b6927048751251063060e94dabb35d4"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f^id=4b6927048751251063060e94dabb35d4"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=4b6927048751251063060e94dabb35d4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4b6927048751251063060e94dabb35d4^sys_idNOT IN4b6927048751251063060e94dabb35d5"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>erp_source</input_name>
+        <instance>4b6927048751251063060e94dabb35d4</instance>
+        <referenced_table>sys_hub_flow_logic</referenced_table>
+        <script>{"erp_source":{"scriptActive":true,"script":"var legal_list \u003d fd_data.trigger.current.legal_entities.toString();\nif(legal_list !\u003d \"\"){\n    var listArr \u003d legal_list.split(\u0027,\u0027);\n    var gr \u003d new GlideRecord(\u0027sn_fin_legal_entity\u0027);\n    gr.get(\u0027sys_id\u0027, listArr[0]);\n    return gr.getValue(\u0027erp_source\u0027);\n}"}}</script>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>4b6927048751251063060e94dabb35d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7e6927048751251063060e94dabb35c6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>7a6927048751251063060e94dabb35c7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:07</sys_updated_on>
+        <ui_id>8c049929-b18b-43b2-97cf-8d2c02274c49</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=7a6927048751251063060e94dabb35c7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>7a6927048751251063060e94dabb35c7</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>8b6927048751251063060e94dabb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+        <value>ERP Source not empty</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f^id=7a6927048751251063060e94dabb35c7"/>
+    <sys_element_mapping action="delete_multiple" query="id=7a6927048751251063060e94dabb35c7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>7a6927048751251063060e94dabb35c7</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>0b6927048751251063060e94dabb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Updated_1.current.erp_source}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>7a6927048751251063060e94dabb35c7</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>436927048751251063060e94dabb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=7a6927048751251063060e94dabb35c7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7a6927048751251063060e94dabb35c7"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">cf6927048751251063060e94dabb35cf</block>
+        <comment/>
+        <connected_to>8c049929-b18b-43b2-97cf-8d2c02274c49</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>876927048751251063060e94dabb35d0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:08</sys_updated_on>
+        <ui_id>daadbc8b-5c31-4d27-9234-7d18c9d076e4</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=876927048751251063060e94dabb35d0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>876927048751251063060e94dabb35d0</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>0f6927048751251063060e94dabb35d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+        <value>Legal Entity not empty</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f^id=876927048751251063060e94dabb35d0"/>
+    <sys_element_mapping action="delete_multiple" query="id=876927048751251063060e94dabb35d0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>876927048751251063060e94dabb35d0</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>8b6927048751251063060e94dabb35d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Updated_1.current.legal_entities}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>876927048751251063060e94dabb35d0</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>c76927048751251063060e94dabb35d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=876927048751251063060e94dabb35d0"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=876927048751251063060e94dabb35d0"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">c76927048751251063060e94dabb35cc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>erp_source</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>8c049929-b18b-43b2-97cf-8d2c02274c49</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>8f6927048751251063060e94dabb35cc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:07</sys_updated_on>
+        <ui_id>1a43de74-30ec-467e-9e67-7292c2ebb19f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8f6927048751251063060e94dabb35cc"/>
+    <sys_element_mapping action="delete_multiple" query="id=8f6927048751251063060e94dabb35cc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>erp_source</field>
+        <id>8f6927048751251063060e94dabb35cc</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:42</sys_created_on>
+        <sys_id>8b6927048751251063060e94dabb35cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f</table>
+        <value>{{Updated_1.current.erp_source.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=8f6927048751251063060e94dabb35cc"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8f6927048751251063060e94dabb35cc"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">d36927048751251063060e94dabb35e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>dc28238d-d737-48eb-a1a1-c04d9b340962</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>9b6927048751251063060e94dabb35e5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:08</sys_updated_on>
+        <ui_id>312ff069-2e05-41a0-bca8-19a1d29c9029</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=9b6927048751251063060e94dabb35e5"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f^id=9b6927048751251063060e94dabb35e5"/>
+    <sys_element_mapping action="delete_multiple" query="id=9b6927048751251063060e94dabb35e5"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>9b6927048751251063060e94dabb35e5</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>d36967048751251063060e94dabb3501</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{e07f091d-7815-4c59-ae4e-c64966cb8197.status}}=0</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=9b6927048751251063060e94dabb35e5"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9b6927048751251063060e94dabb35e5"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">0b6927048751251063060e94dabb35d7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>cf6927048751251063060e94dabb35d7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:08</sys_updated_on>
+        <ui_id>dc28238d-d737-48eb-a1a1-c04d9b340962</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=cf6927048751251063060e94dabb35d7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>cf6927048751251063060e94dabb35d7</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>cf6927048751251063060e94dabb35da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <value>Get ERP Source ID</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f^id=cf6927048751251063060e94dabb35d7"/>
+    <sys_element_mapping action="delete_multiple" query="id=cf6927048751251063060e94dabb35d7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>cf6927048751251063060e94dabb35d7</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>4f6927048751251063060e94dabb35da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{flow_variable.erp_source}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>cf6927048751251063060e94dabb35d7</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>8b6927048751251063060e94dabb35da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=cf6927048751251063060e94dabb35d7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=cf6927048751251063060e94dabb35d7"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">176967048751251063060e94dabb350a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>312ff069-2e05-41a0-bca8-19a1d29c9029</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:43</sys_created_on>
+        <sys_id>db6967048751251063060e94dabb350a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:08</sys_updated_on>
+        <ui_id>07869a97-cf10-4503-a52c-354f77ff063d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=db6967048751251063060e94dabb350a"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f^id=db6967048751251063060e94dabb350a"/>
+    <sys_element_mapping action="delete_multiple" query="id=db6967048751251063060e94dabb350a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>db6967048751251063060e94dabb350a</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:44</sys_created_on>
+        <sys_id>976967048751251063060e94dabb350d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:44</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.status}}=0</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=db6967048751251063060e94dabb350a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=db6967048751251063060e94dabb350a"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT IN366927048751251063060e94dabb35a6,d8cdcd6a8738611063060e94dabb35f4"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=36d7600f-6a4a-46b2-bf8f-472004cd12b5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>erp_source</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ERP Source</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</model>
+        <model_id>feebdde387c82550a3e3cbb4dabb359f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:23:41</sys_created_on>
+        <sys_id>366927048751251063060e94dabb35a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ERP Source</sys_name>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_366927048751251063060e94dabb35a6</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:23:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f991e3f3-cc50-43e7-b56d-7dd01ce7a0c5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>legal_entities</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Legal Entities</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</model>
+        <model_id>feebdde387c82550a3e3cbb4dabb359f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_feebdde387c82550a3e3cbb4dabb359f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 18:56:59</sys_created_on>
+        <sys_id>d8cdcd6a8738611063060e94dabb35f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Legal Entities</sys_name>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_d8cdcd6a8738611063060e94dabb35f4</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 18:56:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f^sys_idNOT IN0f5c192787c82550a3e3cbb4dabb3564,435c192787c82550a3e3cbb4dabb356c,4b5c192787c82550a3e3cbb4dabb3568"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>0f5c192787c82550a3e3cbb4dabb3564</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>435c192787c82550a3e3cbb4dabb356c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:38</sys_created_on>
+        <sys_id>4b5c192787c82550a3e3cbb4dabb3568</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=feebdde387c82550a3e3cbb4dabb359f^sys_idNOT IN556c592787c82550a3e3cbb4dabb3566"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"556c592787c82550a3e3cbb4dabb3566","name":"plan","plan_signature":null}}</plan>
+        <plan_id>feebdde387c82550a3e3cbb4dabb359f</plan_id>
+        <snapshot>927a63848751251063060e94dabb3524</snapshot>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>556c592787c82550a3e3cbb4dabb3566</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:06</sys_updated_on>
+        <trigger display_value="">fc3aab448751251063060e94dabb3554</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=feebdde387c82550a3e3cbb4dabb359f"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>update_vendor</internal_name>
+        <label_cache>[{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.Record.u_connection.sys_id","label":"6 - Look Up Record➛ERP Source Configuration Record➛Connection \u0026 Credential Alias➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_alias","column_name":"sys_id"},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.__dont_treat_as_error__","label":"8 - Look Up Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.__action_status__","label":"8 - Look Up Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.error_message","label":"8 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.status","label":"8 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.Table","label":"8 - Look Up Record➛Connection \u0026 Credential Aliases Table","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.Record","label":"8 - Look Up Record➛Connection \u0026 Credential Aliases Record","reference":"sys_alias","reference_display":"Connection \u0026 Credential Aliases","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.__dont_treat_as_error__","label":"6 - Look Up Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.__action_status__","label":"6 - Look Up Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.error_message","label":"6 - Look Up Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.status","label":"6 - Look Up Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"1","order":0.0},{"label":"Success","value":"0","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.Table","label":"6 - Look Up Record➛ERP Source Configuration Table","reference":"sn_fcms_intg_source","reference_display":"ERP Source Configuration","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e07f091d-7815-4c59-ae4e-c64966cb8197.Record","label":"6 - Look Up Record➛ERP Source Configuration Record","reference":"sn_fcms_intg_source","reference_display":"ERP Source Configuration","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"flow_variable.erp_source","label":"Flow Variables➛ERP Source","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"36d7600f-6a4a-46b2-bf8f-472004cd12b5"}},{"name":"Updated_1.current.erp_source.sys_id","label":"Trigger - Record Updated➛Supplier Record➛ERP source➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_fin_erp_source","column_name":"sys_id"},{"name":"Updated_1.current.legal_entities","label":"Trigger - Record Updated➛Supplier Record➛Legal entities","reference":"sn_fin_legal_entity","reference_display":"Legal Entity","type":"glide_list","base_type":"glide_list","parent_table_name":"sn_fin_supplier","column_name":"legal_entities"},{"name":"Updated_1.current.erp_source","label":"Trigger - Record Updated➛Supplier Record➛ERP source","reference":"sn_fin_erp_source","reference_display":"ERP Source","type":"reference","base_type":"reference","parent_table_name":"sn_fin_supplier","column_name":"erp_source"},{"name":"7de9840f-b478-4818-b7a2-25a35bcf2184.item.previous_value","label":"2 - For Each➛FDChangeDetails➛Previous Value","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"flow_variable.legal_entities","label":"Flow Variables➛Legal Entities","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"f991e3f3-cc50-43e7-b56d-7dd01ce7a0c5"}},{"name":"3ee50432-b8b9-4a77-95dc-ebee33dbc1a6.__dont_treat_as_error__","label":"3 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3ee50432-b8b9-4a77-95dc-ebee33dbc1a6.__action_status__","label":"3 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Supplier Record","reference":"sn_fin_supplier","reference_display":"Supplier","type":"reference","base_type":"reference","attributes":{}},{"name":"917c708c-1346-496b-b3d4-7b74f4312a90.context","label":"2 - Update Supplier in SAP ECC➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"917c708c-1346-496b-b3d4-7b74f4312a90.status","label":"2 - Update Supplier in SAP ECC➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1c383535-fb9b-4faf-a62a-36f245dd5d7d"}},{"name":"917c708c-1346-496b-b3d4-7b74f4312a90.error","label":"2 - Update Supplier in SAP ECC➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6206963d-a88f-4e85-b4ae-b260685b8181"}},{"name":"Updated_1.changed_fields","label":"Trigger - Record Updated➛Changed Fields","type":"array.object","base_type":"array.object","attributes":{"uiTypeLabel":"Array.Object","co_type_name":"FDCollection","child_label":"FDChangeDetails","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"array.object","child_type":"object","child_name":"FDChangeDetails"}},{"name":"7de9840f-b478-4818-b7a2-25a35bcf2184.item","label":"2 - For Each➛FDChangeDetails","reference_display":"FDChangeDetails","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.__action_status__","label":"1 - Create update supplier profile task➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD557163e80d6201106db0c84daff6483b","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"8bce4805-326f-4be5-9c09-5125164f9004"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.__dont_treat_as_error__","label":"1 - Create update supplier profile task➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"299b705c-9d01-493c-ab79-199aba6f28a9"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.supplier_task_sysid","label":"1 - Create update supplier profile task➛Supplier task sysId","reference_display":"Supplier task sysId","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"b455983b-b420-41ab-9d71-78a58f2db641"}},{"name":"b1329ab3-a133-4b2e-b749-0b35f31e63e4.supplier_task_record","label":"1 - Create update supplier profile task➛Supplier task record","reference":"sn_supplier_task","reference_display":"Supplier Task","type":"reference","base_type":"reference","attributes":{"uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"reference","uiUniqueId":"926505cc-20df-4a31-86b7-8bfd906e1bc7"}},{"name":"a0708503-05ba-4804-9aeb-b1cdd45b975c.context","label":"10 - Update Supplier in SAP ECC➛Context","reference":"sys_flow_context","reference_display":"Flow engine context","type":"reference","base_type":"reference","attributes":{}},{"name":"a0708503-05ba-4804-9aeb-b1cdd45b975c.status","label":"10 - Update Supplier in SAP ECC➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Success","value":"Success","order":1.0},{"label":"Error","value":"Error","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"1c383535-fb9b-4faf-a62a-36f245dd5d7d"}},{"name":"a0708503-05ba-4804-9aeb-b1cdd45b975c.error","label":"10 - Update Supplier in SAP ECC➛Error","reference_display":"Error","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"6206963d-a88f-4e85-b4ae-b260685b8181"}}]</label_cache>
+        <master>true</master>
+        <name>Update Vendor</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Update Vendor">feebdde387c82550a3e3cbb4dabb359f</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>586c192787c82550a3e3cbb4dabb35d8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:00</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_variable_value action="delete_multiple" query="document_key=586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=586c192787c82550a3e3cbb4dabb35d8^sys_idNOT IN706c592787c82550a3e3cbb4dabb351e"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:45</sys_created_on>
+        <sys_id>706c592787c82550a3e3cbb4dabb351e</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:06</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=706c592787c82550a3e3cbb4dabb351e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>706c592787c82550a3e3cbb4dabb351e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:45</sys_created_on>
+        <sys_id>3c6c592787c82550a3e3cbb4dabb351f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:45</sys_updated_on>
+        <value>sn_fin_supplier</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>706c592787c82550a3e3cbb4dabb351e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:45</sys_created_on>
+        <sys_id>786c592787c82550a3e3cbb4dabb351f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:02:50</sys_updated_on>
+        <value>active=true^sys_updated_by!=system^erp_company_codeISNOTEMPTY</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>706c592787c82550a3e3cbb4dabb351e</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:45</sys_created_on>
+        <sys_id>b46c592787c82550a3e3cbb4dabb351f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:45</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=706c592787c82550a3e3cbb4dabb351e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=586c192787c82550a3e3cbb4dabb35d8^sys_idNOT IN946c192787c82550a3e3cbb4dabb35d9"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>586c192787c82550a3e3cbb4dabb35d8</id>
+        <name>Update Vendor</name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:43</sys_created_on>
+        <sys_id>946c192787c82550a3e3cbb4dabb35d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=946c192787c82550a3e3cbb4dabb35d9"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=586c192787c82550a3e3cbb4dabb35d8^sys_idNOT IN186c192787c82550a3e3cbb4dabb35da,286c192787c82550a3e3cbb4dabb35ed,e06c192787c82550a3e3cbb4dabb35e5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</model>
+        <model_id>586c192787c82550a3e3cbb4dabb35d8</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:43</sys_created_on>
+        <sys_id>186c192787c82550a3e3cbb4dabb35da</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</model>
+        <model_id>586c192787c82550a3e3cbb4dabb35d8</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:44</sys_created_on>
+        <sys_id>286c192787c82550a3e3cbb4dabb35ed</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</model>
+        <model_id>586c192787c82550a3e3cbb4dabb35d8</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:43</sys_created_on>
+        <sys_id>e06c192787c82550a3e3cbb4dabb35e5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:02:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=586c192787c82550a3e3cbb4dabb35d8^sys_idNOT IN122a2b448751251063060e94dabb35ad,9e2a2b448751251063060e94dabb35a2"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <order>8</order>
+        <parent_ui_id>312ff069-2e05-41a0-bca8-19a1d29c9029</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>122a2b448751251063060e94dabb35ad</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:59</sys_updated_on>
+        <ui_id>cf7bc634-6af3-4e66-b682-f3e1f7fb8da1</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=122a2b448751251063060e94dabb35ad"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>122a2b448751251063060e94dabb35ad</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>1e2a2b448751251063060e94dabb35ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <value>sys_alias</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=122a2b448751251063060e94dabb35ad"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>122a2b448751251063060e94dabb35ad</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>d62a2b448751251063060e94dabb35ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{e07f091d-7815-4c59-ae4e-c64966cb8197.Record.u_connection.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>122a2b448751251063060e94dabb35ad</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>9a2a2b448751251063060e94dabb35ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=122a2b448751251063060e94dabb35ad"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=122a2b448751251063060e94dabb35ad"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <order>6</order>
+        <parent_ui_id>dc28238d-d737-48eb-a1a1-c04d9b340962</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:55</sys_created_on>
+        <sys_id>9e2a2b448751251063060e94dabb35a2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:59</sys_updated_on>
+        <ui_id>e07f091d-7815-4c59-ae4e-c64966cb8197</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9e2a2b448751251063060e94dabb35a2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9e2a2b448751251063060e94dabb35a2</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>962a2b448751251063060e94dabb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <value>sn_fcms_intg_source</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9e2a2b448751251063060e94dabb35a2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>9e2a2b448751251063060e94dabb35a2</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>5e2a2b448751251063060e94dabb35a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>fin_erp.sys_id={{flow_variable.erp_source}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>9e2a2b448751251063060e94dabb35a2</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>162a2b448751251063060e94dabb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9e2a2b448751251063060e94dabb35a2"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9e2a2b448751251063060e94dabb35a2"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=586c192787c82550a3e3cbb4dabb35d8^sys_idNOT IN015315228778611063060e94dabb35e9"/>
+    <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <inputs/>
+        <inputs/>
+        <order>10</order>
+        <parent_ui_id>07869a97-cf10-4503-a52c-354f77ff063d</parent_ui_id>
+        <subflow display_value="Update Supplier in SAP ECC">118dbb5e87635910a3e3cbb4dabb358e</subflow>
+        <subflow_instance_inputs/>
+        <sys_class_name>sys_hub_sub_flow_instance</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:20</sys_created_on>
+        <sys_id>015315228778611063060e94dabb35e9</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:00</sys_updated_on>
+        <ui_id>a0708503-05ba-4804-9aeb-b1cdd45b975c</ui_id>
+    </sys_hub_sub_flow_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=015315228778611063060e94dabb35e9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_sub_flow_instance</document>
+        <document_key>015315228778611063060e94dabb35e9</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:21</sys_created_on>
+        <sys_id>455315228778611063060e94dabb35f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:21</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Wait For Completion">c95315228778611063060e94dabb35e9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=015315228778611063060e94dabb35e9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>changed_fields</field>
+        <id>015315228778611063060e94dabb35e9</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:21</sys_created_on>
+        <sys_id>895315228778611063060e94dabb35f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_118dbb5e87635910a3e3cbb4dabb358e</table>
+        <value>{{Updated_1.changed_fields}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>supplier_record</field>
+        <id>015315228778611063060e94dabb35e9</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:21</sys_created_on>
+        <sys_id>c55315228778611063060e94dabb35f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_input_118dbb5e87635910a3e3cbb4dabb358e</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>wait_for_completion</field>
+        <id>015315228778611063060e94dabb35e9</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:21</sys_created_on>
+        <sys_id>c15315228778611063060e94dabb35f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:21</sys_updated_on>
+        <table>var__m_sys_hub_sub_flow_instance_inputs_015315228778611063060e94dabb35e9</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_sub_flow_instance_inputs_015315228778611063060e94dabb35e9^id=015315228778611063060e94dabb35e9"/>
+    <sys_hub_sub_flow_instance_inputs action="delete_multiple" query="model=015315228778611063060e94dabb35e9^sys_idNOT INc95315228778611063060e94dabb35e9"/>
+    <sys_hub_sub_flow_instance_inputs action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,fd_hide_inline_script_widget=true,uiType=boolean,uiTypeLabel=True/False</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>wait_for_completion</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Wait For Completion</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="">015315228778611063060e94dabb35e9</model>
+        <model_id>015315228778611063060e94dabb35e9</model_id>
+        <model_table>sys_hub_flow_logic_ext_input</model_table>
+        <name>var__m_sys_hub_sub_flow_instance_inputs_015315228778611063060e94dabb35e9</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_sub_flow_instance_inputs</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:21:20</sys_created_on>
+        <sys_id>c95315228778611063060e94dabb35e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:21:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_sub_flow_instance_inputs>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=015315228778611063060e94dabb35e9"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=586c192787c82550a3e3cbb4dabb35d8^sys_idNOT IN1a2a2b448751251063060e94dabb35af,262a2b448751251063060e94dabb35d3,6e2a2b448751251063060e94dabb35c8,a22a2b448751251063060e94dabb35cc,ae2a2b448751251063060e94dabb35cf,e22a2b448751251063060e94dabb35b4,ee2a2b448751251063060e94dabb35b7"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7e6927048751251063060e94dabb35c6</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>1a2a2b448751251063060e94dabb35af</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:58</sys_updated_on>
+        <ui_id>8c049929-b18b-43b2-97cf-8d2c02274c49</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=1a2a2b448751251063060e94dabb35af"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>1a2a2b448751251063060e94dabb35af</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>662a2b448751251063060e94dabb35b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <value>ERP Source not empty</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8^id=1a2a2b448751251063060e94dabb35af"/>
+    <sys_element_mapping action="delete_multiple" query="id=1a2a2b448751251063060e94dabb35af"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>1a2a2b448751251063060e94dabb35af</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>e22a2b448751251063060e94dabb35b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Updated_1.current.erp_source}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>1a2a2b448751251063060e94dabb35af</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>222a2b448751251063060e94dabb35b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:56</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=1a2a2b448751251063060e94dabb35af"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1a2a2b448751251063060e94dabb35af"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">176967048751251063060e94dabb350a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>312ff069-2e05-41a0-bca8-19a1d29c9029</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>262a2b448751251063060e94dabb35d3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:27:00</sys_updated_on>
+        <ui_id>07869a97-cf10-4503-a52c-354f77ff063d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=262a2b448751251063060e94dabb35d3"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8^id=262a2b448751251063060e94dabb35d3"/>
+    <sys_element_mapping action="delete_multiple" query="id=262a2b448751251063060e94dabb35d3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>262a2b448751251063060e94dabb35d3</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>ee2a2b448751251063060e94dabb35d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{cf7bc634-6af3-4e66-b682-f3e1f7fb8da1.status}}=0</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=262a2b448751251063060e94dabb35d3"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=262a2b448751251063060e94dabb35d3"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">836927048751251063060e94dabb35d4</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <flow_variable/>
+        <flow_variables_assigned>erp_source</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>daadbc8b-5c31-4d27-9234-7d18c9d076e4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>6e2a2b448751251063060e94dabb35c8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:59</sys_updated_on>
+        <ui_id>ad27378f-a917-476d-a1b4-49408d6ed824</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6e2a2b448751251063060e94dabb35c8"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8^id=6e2a2b448751251063060e94dabb35c8"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6e2a2b448751251063060e94dabb35c8"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6e2a2b448751251063060e94dabb35c8^sys_idNOT IN6e2a2b448751251063060e94dabb35c9"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>erp_source</input_name>
+        <instance>6e2a2b448751251063060e94dabb35c8</instance>
+        <referenced_table>sys_hub_flow_logic</referenced_table>
+        <script>{"erp_source":{"scriptActive":true,"script":"var legal_list \u003d fd_data.trigger.current.legal_entities.toString();\nif(legal_list !\u003d \"\"){\n    var listArr \u003d legal_list.split(\u0027,\u0027);\n    var gr \u003d new GlideRecord(\u0027sn_fin_legal_entity\u0027);\n    gr.get(\u0027sys_id\u0027, listArr[0]);\n    return gr.getValue(\u0027erp_source\u0027);\n}"}}</script>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>6e2a2b448751251063060e94dabb35c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">0b6927048751251063060e94dabb35d7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>a22a2b448751251063060e94dabb35cc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:59</sys_updated_on>
+        <ui_id>dc28238d-d737-48eb-a1a1-c04d9b340962</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=a22a2b448751251063060e94dabb35cc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>a22a2b448751251063060e94dabb35cc</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>a22a2b448751251063060e94dabb35cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <value>Get ERP Source ID</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8^id=a22a2b448751251063060e94dabb35cc"/>
+    <sys_element_mapping action="delete_multiple" query="id=a22a2b448751251063060e94dabb35cc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>a22a2b448751251063060e94dabb35cc</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>222a2b448751251063060e94dabb35cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{flow_variable.erp_source}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>a22a2b448751251063060e94dabb35cc</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>6e2a2b448751251063060e94dabb35ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=a22a2b448751251063060e94dabb35cc"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a22a2b448751251063060e94dabb35cc"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">d36927048751251063060e94dabb35e5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>dc28238d-d737-48eb-a1a1-c04d9b340962</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>ae2a2b448751251063060e94dabb35cf</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:59</sys_updated_on>
+        <ui_id>312ff069-2e05-41a0-bca8-19a1d29c9029</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ae2a2b448751251063060e94dabb35cf"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8^id=ae2a2b448751251063060e94dabb35cf"/>
+    <sys_element_mapping action="delete_multiple" query="id=ae2a2b448751251063060e94dabb35cf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ae2a2b448751251063060e94dabb35cf</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>6a2a2b448751251063060e94dabb35d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{e07f091d-7815-4c59-ae4e-c64966cb8197.status}}=0</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ae2a2b448751251063060e94dabb35cf"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ae2a2b448751251063060e94dabb35cf"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">c76927048751251063060e94dabb35cc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <flow_variable/>
+        <flow_variable/>
+        <flow_variables_assigned>erp_source</flow_variables_assigned>
+        <inputs/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>8c049929-b18b-43b2-97cf-8d2c02274c49</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:56</sys_created_on>
+        <sys_id>e22a2b448751251063060e94dabb35b4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:58</sys_updated_on>
+        <ui_id>1a43de74-30ec-467e-9e67-7292c2ebb19f</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e22a2b448751251063060e94dabb35b4"/>
+    <sys_element_mapping action="delete_multiple" query="id=e22a2b448751251063060e94dabb35b4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>erp_source</field>
+        <id>e22a2b448751251063060e94dabb35b4</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>a22a2b448751251063060e94dabb35b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8</table>
+        <value>{{Updated_1.current.erp_source.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e22a2b448751251063060e94dabb35b4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e22a2b448751251063060e94dabb35b4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">cf6927048751251063060e94dabb35cf</block>
+        <comment/>
+        <connected_to>8c049929-b18b-43b2-97cf-8d2c02274c49</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>ee2a2b448751251063060e94dabb35b7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:59</sys_updated_on>
+        <ui_id>daadbc8b-5c31-4d27-9234-7d18c9d076e4</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ee2a2b448751251063060e94dabb35b7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ee2a2b448751251063060e94dabb35b7</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>ee2a2b448751251063060e94dabb35c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <value>Legal Entity not empty</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8^id=ee2a2b448751251063060e94dabb35b7"/>
+    <sys_element_mapping action="delete_multiple" query="id=ee2a2b448751251063060e94dabb35b7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ee2a2b448751251063060e94dabb35b7</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>6e2a2b448751251063060e94dabb35c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{Updated_1.current.legal_entities}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>ee2a2b448751251063060e94dabb35b7</id>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:57</sys_created_on>
+        <sys_id>aa2a2b448751251063060e94dabb35c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:57</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ee2a2b448751251063060e94dabb35b7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ee2a2b448751251063060e94dabb35b7"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=586c192787c82550a3e3cbb4dabb35d8^sys_idNOT IN4e2a2b448751251063060e94dabb3581,751f89ea8738611063060e94dabb359b"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=36d7600f-6a4a-46b2-bf8f-472004cd12b5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>erp_source</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ERP Source</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</model>
+        <model_id>586c192787c82550a3e3cbb4dabb35d8</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-24 08:26:55</sys_created_on>
+        <sys_id>4e2a2b448751251063060e94dabb3581</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ERP Source</sys_name>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_4e2a2b448751251063060e94dabb3581</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-24 08:26:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f991e3f3-cc50-43e7-b56d-7dd01ce7a0c5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>legal_entities</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Legal Entities</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Update Vendor">586c192787c82550a3e3cbb4dabb35d8</model>
+        <model_id>586c192787c82550a3e3cbb4dabb35d8</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_586c192787c82550a3e3cbb4dabb35d8</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 19:02:49</sys_created_on>
+        <sys_id>751f89ea8738611063060e94dabb359b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Legal Entities</sys_name>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_hub_flow_variable_751f89ea8738611063060e94dabb359b</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 19:02:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8^sys_idNOT INa86c192787c82550a3e3cbb4dabb35e1,e46c592787c82550a3e3cbb4dabb3517,ec6c192787c82550a3e3cbb4dabb35e9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:43</sys_created_on>
+        <sys_id>a86c192787c82550a3e3cbb4dabb35e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:44</sys_created_on>
+        <sys_id>e46c592787c82550a3e3cbb4dabb3517</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nishant</sys_created_by>
+        <sys_created_on>2023-01-03 15:47:44</sys_created_on>
+        <sys_id>ec6c192787c82550a3e3cbb4dabb35e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nishant</sys_updated_by>
+        <sys_updated_on>2023-01-03 15:47:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_586c192787c82550a3e3cbb4dabb35d8"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>feebdde387c82550a3e3cbb4dabb359f</sys_id>
+        <latest_snapshot>586c192787c82550a3e3cbb4dabb35d8</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch9b-01-18-2023_01-31-2023_1707.zip</compiler_build>
+    </sys_hub_flow>
+</record_update>

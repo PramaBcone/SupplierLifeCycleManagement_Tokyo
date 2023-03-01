@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD8b5125aefe7861104dcdfdb701cf26ce</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>085c1636875291103844b8c4dabb3533</scope_name>
+        <serialized_content>{"FlowDesigner:FD8b5125aefe7861104dcdfdb701cf26ce":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD8b5125aefe7861104dcdfdb701cf26ce.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Current Values\",\"mandatory\":\"false\",\"child_name\":\"current_value\",\"uiUniqueId\":\"d8637fbb-1c7e-408c-a7e7-59939ab97dda\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD8b5125aefe7861104dcdfdb701cf26ce\",\"child_label\":\"Current Value\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.string\",\"child_defaultValue\":\"\",\"child_type\":\"string\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"8095097a-f20b-44a2-81f9-5450a8f33af3\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>Prama</sys_created_by>
+        <sys_created_on>2023-02-06 20:22:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4f5125ae8778611063060e94dabb35ce</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FD8b5125aefe7861104dcdfdb701cf26ce</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Supplier Lifecycle Management Integration with SAP" source="sn_slm_sap_int">085c1636875291103844b8c4dabb3533</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Supplier Lifecycle Management Integration with SAP">085c1636875291103844b8c4dabb3533</sys_scope>
+        <sys_update_name>sys_complex_object_4f5125ae8778611063060e94dabb35ce</sys_update_name>
+        <sys_updated_by>Prama</sys_updated_by>
+        <sys_updated_on>2023-02-06 20:28:53</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
